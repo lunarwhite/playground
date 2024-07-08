@@ -1,0 +1,14 @@
+namespace: coolstore-stage
+resources:
+  - namespace.yaml
+  - ../../base
+patchesJson6902:
+  - target:
+      version: v1
+      group: apps
+      kind: Deployment
+      name: web
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/env/0/value
+        value: coolstore-stage

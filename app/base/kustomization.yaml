@@ -1,0 +1,13 @@
+commonLabels:
+  app.kubernetes.io/part-of: coolstore
+resources:
+  - catalog-deploy.yaml
+  - catalog-svc.yaml
+  - inventory-deploy.yaml
+  - inventory-svc.yaml
+  - gateway-deploy.yaml
+  - gateway-svc.yaml
+  - gateway-route.yaml
+  - web-deploy.yaml
+  - web-svc.yaml
+  - web-route.yaml
