@@ -1,0 +1,8 @@
+resources:
+  - ../../base
+replicas:
+  - name: web
+    count: 3
+# images:
+#   - name: web
+#     newTag: prod

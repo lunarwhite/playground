@@ -1,0 +1,8 @@
+resources:
+  - ../../base
+replicas:
+  - name: catalog
+    count: 2
+# images:
+#   - name: catalog
+#     newTag: prod

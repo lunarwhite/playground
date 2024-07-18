@@ -1,0 +1,8 @@
+resources:
+  - ../../base
+replicas:
+  - name: gateway
+    count: 3
+# images:
+#   - name: gateway
+#     newTag: prod
