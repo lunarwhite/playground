@@ -1,6 +1,4 @@
-namespace: coolstore-stage
 resources:
-  - namespace.yaml
   - ../../base
 patchesJson6902:
   - target:

@@ -15,6 +15,9 @@ spec:
     server: https://kubernetes.default.svc
     namespace: coolstore-stage
   syncPolicy:
+    managedNamespaceMetadata:
+      labels:
+        argocd.argoproj.io/managed-by: openshift-gitops
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
