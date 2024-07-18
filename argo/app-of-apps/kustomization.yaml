@@ -1,0 +1,5 @@
+resources:
+  - catalog.yaml
+  - inventory.yaml
+  - gateway.yaml
+  - web.yaml

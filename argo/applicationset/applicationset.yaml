@@ -1,0 +1,51 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: coolstore-appset
+  namespace: openshift-gitops
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - list:
+        elements:
+          - name: catalog
+            path: apps/catalog/overlays/prod
+            syncWave: 0
+          - name: inventory
+            path: apps/inventory/overlays/prod
+            syncWave: 0
+          - name: gateway
+            path: apps/gateway/overlays/prod
+            syncWave: 1
+          - name: web
+            path: apps/web/overlays/prod
+            syncWave: 2
+  template:
+    metadata:
+      name: "coolstore-{{.name}}"
+      namespace: openshift-gitops
+      annotations:
+        argocd.argoproj.io/sync-wave: "{{.syncWave}}"
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/lunarwhite/playground.git
+        targetRevision: config
+        path: "{{.path}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: coolstore
+      syncPolicy:
+        managedNamespaceMetadata:
+          labels:
+            argocd.argoproj.io/managed-by: openshift-gitops
+        syncOptions:
+          - CreateNamespace=true
+          - ApplyOutOfSyncOnly=true
+          - PruneLast=true
+        automated:
+          prune: true
+          selfHeal: true
