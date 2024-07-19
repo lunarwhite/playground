@@ -1,3 +1,6 @@
+commonLabels:
+  app.kubernetes.io/instance: web
+  app.kubernetes.io/part-of: coolstore
 resources:
   - deploy.yaml
   - svc.yaml

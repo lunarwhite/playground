@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/lunarwhite/playground.git
     targetRevision: config
-    path: argo/app-of-apps
+    path: argo/apps
   destination:
     server: https://kubernetes.default.svc
     namespace: coolstore
