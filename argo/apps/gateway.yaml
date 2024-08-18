@@ -9,8 +9,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/lunarwhite/playground.git
-    targetRevision: config
-    path: apps/gateway/overlays/prod
+    targetRevision: config-ci
+    path: apps/gateway/overlays/stage
   destination:
     server: https://kubernetes.default.svc
     namespace: coolstore

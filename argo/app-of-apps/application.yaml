@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/lunarwhite/playground.git
-    targetRevision: config
+    targetRevision: config-ci
     path: argo/apps
   destination:
     server: https://kubernetes.default.svc
