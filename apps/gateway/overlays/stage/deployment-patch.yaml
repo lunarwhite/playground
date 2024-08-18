@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway
+spec:
+  selector:
+    matchLabels:
+      app: gateway
+  template:
+    spec:
+      containers:
+        - name: gateway
+          image: quay.io/rh-ee-yuewu/gateway-vertx:v2.0.1
+          resources: {}
