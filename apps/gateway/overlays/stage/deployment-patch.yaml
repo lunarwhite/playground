@@ -10,5 +10,5 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: quay.io/rh-ee-yuewu/catalog-spring-boot:ebf19126e6c148310522473b4c424a2f8d05081d
+          image: quay.io/rh-ee-yuewu/gateway-vertx:a94b77c8aea2bd1b0dff0771bf0447a6db4aa2f8@sha256:5f04438e18d0d40dba407ce2cd4001115296c2bc22c1e9cc92302593de098700
           resources: {}
