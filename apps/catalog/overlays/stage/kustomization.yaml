@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - ../../base
 images:
-- digest: sha256:3de08d3745486688f1b26b6efd69b82b23b39f35ff87ce3f445cb0e3ddb32775
+- digest: sha256:573b5051a0deabea1688df520f5c4d50a447590f91b9c55963a39d74b1b3cea5
   name: quay.io/rh-ee-yuewu/catalog-spring-boot
-  newTag: 16f7f9b1127d69b1c2105d3ee02b5a3509f50771
+  newTag: 1961146c74a30371fe6d0a8382f7c9a0ca2df550
